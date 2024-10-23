@@ -67,7 +67,7 @@ export class pageVideoStreamCollector extends EventEmitter {
         format: this.options.format || 'jpeg',
         quality: quality,
       });
-    } catch (e) {
+    } catch {
       if (shouldDeleteSessionOnFailure) {
         this.endSession();
       }

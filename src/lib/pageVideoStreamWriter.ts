@@ -74,13 +74,13 @@ export default class PageVideoStreamWriter extends EventEmitter {
     }
 
     try {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       const ffmpeg = require('@ffmpeg-installer/ffmpeg');
       if (ffmpeg.path) {
         return ffmpeg.path;
       }
       return null;
-    } catch (e) {
+    } catch {
       return null;
     }
   }
